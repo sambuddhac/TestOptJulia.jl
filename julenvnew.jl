@@ -1,0 +1,26 @@
+import Pkg
+using Pkg
+Pkg.activate("GTheoryJulEnvNew")
+Pkg.add(Pkg.PackageSpec(name="Cbc", version="0.7.1"))
+Pkg.add(Pkg.PackageSpec(name="Clp", version="0.8.1"))
+Pkg.add(Pkg.PackageSpec(name="GLPK", version="0.13.0"))
+Pkg.add("Ipopt")
+Pkg.add(Pkg.PackageSpec(name="JuMP", version="0.21.3"))
+Pkg.add(Pkg.PackageSpec(name="Plots", version="1.6.3"))
+Pkg.add(Pkg.PackageSpec(name="PrettyTables", version="0.9.1"))
+Pkg.add(Pkg.PackageSpec(name="VegaLite", version="2.3.0"))
+Pkg.add(Pkg.PackageSpec(name="CPLEX", version="0.6.1"))
+Pkg.add(Pkg.PackageSpec(name="CSV", version="0.6.0"))
+Pkg.add(Pkg.PackageSpec(name="DataArrays", version="0.7.0"))
+Pkg.add(Pkg.PackageSpec(name="DataFrames", version="0.20.2"))
+Pkg.add(Pkg.PackageSpec(name="Documenter", version="0.24.7"))
+Pkg.add(Pkg.PackageSpec(name="DocumenterTools", version="0.1.9"))
+Pkg.add(Pkg.PackageSpec(name="Gurobi", version="0.7.6"))
+Pkg.add("MathOptInterface")
+Pkg.add(Pkg.PackageSpec(name="MathProgBase", version="0.7.8"))
+Pkg.add(Pkg.PackageSpec(name="StatsBase", version="0.33.0"))
+Pkg.add(Pkg.PackageSpec(name="YAML", version="0.4.3"))
+Pkg.add(Pkg.PackageSpec(name="LinearAlgebra"))
+Pkg.status()
+
+
