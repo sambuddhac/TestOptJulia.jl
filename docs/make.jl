@@ -20,7 +20,7 @@ makedocs(
 deploydocs(
     repo = "https://github.com/sambuddhac/TestOptJulia",
     target = "build",
-    #branch = "gh-pages",
+    branch = "main",
     devbranch = "main",
     push_preview = true,
 )
