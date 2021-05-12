@@ -1,3 +1,9 @@
+"""
+    genVarConstr(M, coeffB, RHS)
+    
+This will be generated as markdown documentation by Documenter
+"""
+
 function genVarConstr(M::Model, coeffB::Array{Float64,1}, RHS::Array{Float64,1})
         @variable(M, -10 <= x <= 100)
         @variable(M, -10 <= y <= 100)
@@ -5,6 +11,12 @@ function genVarConstr(M::Model, coeffB::Array{Float64,1}, RHS::Array{Float64,1})
         @constraint(M, coeffB[1] * x + coeffB[2] * y + coeffB[3] * z == RHS[1])
         return M
 end
+
+"""
+    testLP(setting, sep, coeffA, coeffB, coefC, RHS)
+    
+This will be generated as markdown documentation by Documenter
+"""
 
 function testLP(settings::Dict, coeffA::Array{Float64,1}, coeffB::Array{Float64,1}, coeffC::Array{Float64,1}, RHS::Array{Float64,1})
         if settings["Solver"] == "Gurobi"

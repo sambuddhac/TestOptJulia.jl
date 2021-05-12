@@ -7,6 +7,8 @@ using Clp
 using Dates
 using MathOptInterface
 using CSV
+using Documenter
+using Literate
 include("testLP.jl")
 include("testLPMain.jl")
 end
