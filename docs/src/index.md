@@ -1,5 +1,9 @@
 # TestOptJulia (A model for testing aspects of Julia+JuMP optimization model)
 
+```@meta
+CurrentModule = TestOptJulia
+```
+
 ## Introduction
 
 This repository is meant for testing several aspects of code development for other ongoing larger projects, that use the structure of a `JuMP optimization model` with larger Julia codes. The codes here are as simple as possible, so that, the main focus can be put on the aspects of software development and debugging.
@@ -23,9 +27,14 @@ Currently, the settings.yml file has only provision for choosing among the Gurob
 
 # testLPMain.jl Documentation
 
-```@docs
+```@contents
+```
+## Functions
+```@autodocs
 Modules = [TestOptJulia]
-Pages = ["testLPMain.jl"]
-Public = true
-start_of_opt(setting, sep, output_path)
+Pages = ["testLPMain.jl", "testLP.jl"]
+```
+## Index
+
+```@index
 ```

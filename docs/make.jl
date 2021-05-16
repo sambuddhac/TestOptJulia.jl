@@ -11,8 +11,12 @@ pages = OrderedDict(
     "Welcome Page" => "index.md",
 )
 makedocs(
-    modules=[TestOptJulia],
-    format = Documenter.HTML(prettyurls = false),
+    modules = [TestOptJulia],
+    format = Documenter.HTML(
+        prettyurls = get(ENV, "CI", "false") == "true",
+        canonical = "https://github.io/TestOptJulia.jl",
+        assets = String[]
+    ),
     sitename="TestOptJulia.jl",
     authors="Sambuddha Chakrabarti"
 )
