@@ -6,7 +6,8 @@ Pkg.activate("GTheoryJulEnvNew")
 testpath = joinpath(pwd(), "src")
 push!(LOAD_PATH, testpath)
 import DataStructures: OrderedDict
-using Documenter, TestOptJulia
+using Documenter, TestOptJulia, DocumenterTools
+DocumenterTools.genkeys(user="sambuddhac", repo="git@github.com:sambuddhac/TestOptJulia.jl.git")
 pages = OrderedDict(
     "Welcome Page" => "index.md",
 )
@@ -22,9 +23,9 @@ makedocs(
 )
 
 deploydocs(
-    repo = "https://github.com/sambuddhac/TestOptJulia",
+    repo = "github.com/sambuddhac/TestOptJulia.jl",
     target = "build",
-    branch = "main",
+    branch = "gh-pages",
     devbranch = "main",
     push_preview = true,
 )

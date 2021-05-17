@@ -3,3 +3,4 @@ testPyJul/
 testResults.json
 testResults.csv
 .ipynb_checkpoints/
+docs/build/
