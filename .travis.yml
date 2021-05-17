@@ -1,12 +1,32 @@
 codecov: true
 coveralls: true
-language: julia
+#language: julia
+#julia:
+#  - nightly
+#  - 1.0.6
+#  - 1.3.1
+#  - 1.5.2
+language: julia 
+os:
+  - linux
+  - osx
 julia:
-  - nightly
-  - 1.0.6
   - 1.3.1
-  - 1.5.2
-
+  - 1
+  - nightly
+notifications:
+  email: false
+# uncomment the following lines to override the default test script
+#script:
+#  - if [[ -a .git/shallow ]]; then git fetch --unshallow; fi
+#  - julia -e 'Pkg.clone(pwd()); Pkg.build("ReactiveBasics"); Pkg.test("ReactiveBasics"; coverage=true)'
+after_success:
+  - julia -e 'Pkg.add("Documenter")'
+  - julia -e 'ENV["DOCUMENTER_DEBUG"] = "true"; cd(Pkg.dir("ReactiveBasics", "docs")); include("make.jl")'
+  # push coverage results to Coveralls
+  - julia -e 'cd(Pkg.dir("ReactiveBasics")); Pkg.add("Coverage"); using Coverage; Coveralls.submit(Coveralls.process_folder())'
+  # push coverage results to Codecov
+  - julia -e 'cd(Pkg.dir("ReactiveBasics")); Pkg.add("Coverage"); using Coverage; Codecov.submit(Codecov.process_folder())'
 jobs:
   include:
     - stage: "Documentation"
@@ -17,3 +37,5 @@ jobs:
                                                Pkg.instantiate()'
         - julia --project=docs/ docs/make.jl
       after_success: skip
+
+# Documentation: http://docs.travis-ci.com/user/languages/julia/
