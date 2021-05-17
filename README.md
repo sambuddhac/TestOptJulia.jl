@@ -1,6 +1,6 @@
 # TestOptJulia (A model for testing aspects of Julia+JuMP optimization model)
-[![](https://img.shields.io/badge/docs-stable-blue.svg)](https://sambuddhac.github.io/TestOptJulia.jl/stable)
-[![](https://img.shields.io/badge/docs-dev-blue.svg)](https://sambuddhac.github.io/TestOptJulia.jl/dev)
+[![Travis - CI](https://img.shields.io/badge/docs-stable-blue.svg)](https://sambuddhac.github.io/TestOptJulia.jl/stable)
+[![Travis - CI](https://img.shields.io/badge/docs-dev-blue.svg)](https://sambuddhac.github.io/TestOptJulia.jl/dev)
 ## Introduction
 
 This repository is meant for testing several aspects of code development for other ongoing larger projects, that use the structure of a `JuMP optimization model` with larger Julia codes. The codes here are as simple as possible, so that, the main focus can be put on the aspects of software development and debugging.
