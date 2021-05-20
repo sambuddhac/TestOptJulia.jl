@@ -7,22 +7,27 @@ testpath = joinpath(pwd(), "src")
 push!(LOAD_PATH, testpath)
 import DataStructures: OrderedDict
 using Documenter, TestOptJulia, DocumenterTools
-DocumenterTools.genkeys(user="sambuddhac", repo="git@github.com:sambuddhac/TestOptJulia.jl.git")
+#DocumenterTools.genkeys(user="sambuddhac", repo="git@github.com:sambuddhac/TestOptJulia.jl.git")
+DocMeta.setdocmeta!(TestOptJulia, :DocTestSetup, :(using TestOptJulia); recursive=true)
 pages = OrderedDict(
     "Welcome Page" => "index.md",
 )
-makedocs(
-    modules = [TestOptJulia],
-    format = Documenter.HTML(
-        prettyurls = get(ENV, "CI", "false") == "true",
-        canonical = "https://github.io/TestOptJulia.jl",
-        assets = String[]
-    ),
+makedocs(;
+    modules=[TestOptJulia],
+    authors="Sambuddha Chakrabarti, Hosna Khajeh, Tom Nudell, Mohammad Reza Hesamzadeh, Ross Baldick",
+    #repo="https://github.com/sambuddhac/TestOptJulia.jl/blob/{commit}{path}#{line}",
     sitename="TestOptJulia.jl",
-    authors="Sambuddha Chakrabarti"
+    format=Documenter.HTML(;
+        prettyurls=get(ENV, "CI", "false") == "true",
+        canonical="https://sambuddhac.github.io/TestOptJulia.jl",
+        assets=String[],
+    ),
+    pages=[
+        "Home" => "index.md",
+    ],
 )
 
-deploydocs(
+deploydocs(;
     repo = "github.com/sambuddhac/TestOptJulia.jl",
     target = "build",
     branch = "gh-pages",

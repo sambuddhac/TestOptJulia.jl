@@ -26,7 +26,9 @@ julia Run_script.jl
 Currently, the settings.yml file has only provision for choosing among the Gurobi or, Ipopt solvers.
 
 # testLPMain.jl Documentation
+# TestOptJulia
 
+Documentation for [TestOptJulia](https://github.com/sambuddhac/TestOptJulia.jl).
 ```@contents
 ```
 ## Functions

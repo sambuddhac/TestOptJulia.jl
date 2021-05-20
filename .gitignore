@@ -1,6 +1,10 @@
+*.jl.*.cov
+*.jl.cov
+*.jl.mem
 GTheoryJulEnvNew/
 testPyJul/
 testResults.json
 testResults.csv
 .ipynb_checkpoints/
-docs/build/
+/Manifest.toml
+/docs/build/

@@ -1,6 +1,7 @@
 import Pkg
 using Pkg
 Pkg.activate("GTheoryJulEnvNew")
+Pkg.add("PkgTemplates")
 Pkg.add(Pkg.PackageSpec(name="Cbc", version="0.7.1"))
 Pkg.add(Pkg.PackageSpec(name="Clp", version="0.8.1"))
 Pkg.add(Pkg.PackageSpec(name="GLPK", version="0.13.0"))
