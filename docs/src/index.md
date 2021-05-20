@@ -9,7 +9,7 @@ CurrentModule = TestOptJulia
 This repository is meant for testing several aspects of code development for other ongoing larger projects, that use the structure of a `JuMP optimization model` with larger Julia codes. The codes here are as simple as possible, so that, the main focus can be put on the aspects of software development and debugging.
 
 ## Installation
-### Instructions for installing on a Debian type Linux OS (Ubuntu, Debian etc.)
+### Instructions for installing on a Debian type Linux OS (Ubuntu, Debian etc.) or, on Mac OSX
 In order to install and run the TestOptJulia software, go through the following steps: 
 1. Clone this repository to your local machine and navigate to the top level `TestOptJulia` folder.
 
