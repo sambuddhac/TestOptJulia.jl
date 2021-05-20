@@ -22,6 +22,7 @@ function testLP(settings::Dict, coeffA::Array{Float64,1}, coeffB::Array{Float64,
         if settings["Solver"] == "Gurobi"
                 #Gurobi.GurobiSolver #Clp.ClpSolver
 	        #model=Model(solver=GurobiSolver()) #For JuMP 18
+                # I am just adding a line to see I can push a commit
                 model=Model(Gurobi.Optimizer) #Model(Clp.Optimizer)
                 model = genVarConstr(model, coeffB, RHS)
                 @constraint(model, coeffC[1] * model[:x]^2 + coeffC[2] * model[:y]^2 + coeffC[3] * model[:z]^2 <= RHS[2])
