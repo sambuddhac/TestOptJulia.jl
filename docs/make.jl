@@ -14,7 +14,7 @@ pages = OrderedDict(
 )
 makedocs(;
     modules=[TestOptJulia],
-    authors="Sambuddha Chakrabarti, Hosna Khajeh, Tom Nudell, Mohammad Reza Hesamzadeh, Ross Baldick",
+    authors="Sambuddha Chakrabarti",
     #repo="https://github.com/sambuddhac/TestOptJulia.jl/blob/{commit}{path}#{line}",
     sitename="TestOptJulia.jl",
     format=Documenter.HTML(;
