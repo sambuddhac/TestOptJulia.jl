@@ -25,3 +25,8 @@ YAML = "ddb6d928-2868-570f-bddf-ab3f9cf99eb6"
 
 [compat]
 DataFrames = "1"
+MathOptInterface = "0.9"
+Literate = "2"
+DataStructures = "0.18"
+Plots = "1"
+
